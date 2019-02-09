@@ -3,18 +3,12 @@
 @section('content')
     <main>
         <section class="offer container clearfix">
-            <div class="offer-item offer-material new-item">
-                <p class="offer-item-type">Материалы</p>
-                <a href="#" class="offer-item-info">На любой вкус</a>
-            </div>
-            <div class="offer-item offer-tool">
-                <p class="offer-item-type">Инструмент</p>
-                <a href="#" class="offer-item-info">На все случаи</a>
-            </div>
-            <div class="offer-item offer-equipment">
-                <p class="offer-item-type">Техника</p>
-                <a href="#" class="offer-item-info">Для стройки</a>
-            </div>
+            @foreach($categories as $category)
+                <div class="offer-item offer-{{ $category->slug }}">
+                    <p class="offer-item-type">{{ $category->title }}</p>
+                    <a href="{{ route('product.list', $category->slug) }}" class="offer-item-info">На любой вкус</a>
+                </div>
+            @endforeach
         </section>
         <section class="offer-slider bottom-offer container clearfix">
             <div class="offer-slider-block">

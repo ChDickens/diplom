@@ -14,4 +14,6 @@
 Route::get('/', 'HomeController@index')->name('main.page');
 //Route::get('/{slug}', 'PageController@show')->name('page');
 Route::get('/catalog/{slug}', 'ProductController@show')->name('show.product');
+Route::get('/categories/{slug}', 'CategoryController@productList')->name('product.list');
 Route::get('/{slug}', 'PageController@show')->name('show.page');
+Route::post('/search', 'SearchController@search')->name('search');
