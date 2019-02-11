@@ -57,7 +57,7 @@
                         <img src="{{ asset('img') . '/' . $product->image }}" width="218" height="169" alt="Перфоратор Bosch BFG 9000">
                     </figure>
                     <div class="catalog-item-buttons">
-                        <a href="#" class="catalog-button catalog-item-buy">Купить</a>
+                        <a href="{{ route('add.to.cart', ['id' => $product->id]) }}" role="button" style="font-size: 16px;">Купить</a>
                         <a href="{{ route('show.product', $product->slug) }}" class="catalog-button catalog-item-bookmark">Подробнее</a>
                     </div>
                     <p class="catalog-item-vendor">{{ $product->title }}</p>

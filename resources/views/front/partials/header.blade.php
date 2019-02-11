@@ -9,8 +9,10 @@
             </form>
         </div>
         <a href="#" class="header-upper-bookmark">Закладки: 0</a>
-        <a href="#" class="header-upper-cart">Корзина: 0</a>
-        <a href="#" class="header-upper-order">Оформить заказ</a>
+        <a href="{{ route('show.cart') }}" class="header-upper-cart">Корзина:
+            {{ Session::has('cart') ? Session::get('cart')->totalQty : '0'}}
+        </a>
+        <a href="{{ route('checkout') }}" class="header-upper-order">Оформить заказ</a>
     </div>
 </div>
 <div class="container">
