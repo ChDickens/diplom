@@ -33,13 +33,13 @@ class CheckoutController extends Controller
           'phone' => $request->input('phone'),
           'client_email' => $request->input('client_email'),
           'amount' => $cart->totalPrice * 100,
-        'shop_id' => 4617,
-        'currency' => 'USD',
-        'description' => 'description',
-        'order_id' => 1,
-        'debug' => 1,
-        'signature' => 'c1ee070b34d13574',
-        'language' => 'ru'
+            'shop_id' => 4617,
+            'currency' => 'USD',
+            'description' => 'description',
+            'order_id' => 1,
+            'debug' => 1,
+            'signature' => 'c1ee070b34d13574',
+            'language' => 'ru'
 
         ];
 
