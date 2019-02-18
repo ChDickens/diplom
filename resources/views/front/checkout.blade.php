@@ -4,51 +4,35 @@
 
     <main class="container" style="padding-bottom: 60px;">
         @if(Session::has('cart'))
+            <!-- https://megakassa.ru -->
+            {{--<h2>Вы заказали на сумму: {{ $cart->totalPrice }}</h2>--}}
+            {{--<div class="feedback-block">--}}
+                {{--<form action="{{ route('checkout.form') }}" method="POST">--}}
+                    {{--{{ csrf_field() }}--}}
+                    {{--<input type="text" value="Имя" name="name">--}}
+                    {{--<br>--}}
+                    {{--<input type="text" value="Телефон" name="phone">--}}
+                    {{--<br>--}}
+                    {{--<input type="text" value="E-mail" name="email">--}}
+                    {{--<input type="submit" value="Заказть">--}}
+                {{--</form>--}}
+            {{--</div>--}}
 
-            {{--<table>--}}
-                {{--<tr>--}}
-                    {{--<td>№</td>--}}
-                    {{--<td>Название</td>--}}
-                    {{--<td>Количество</td>--}}
-                    {{--<td>Цена за ед</td>--}}
-                    {{--<td>Цена общая за продукт</td>--}}
-                    {{--<td>+</td>--}}
-                    {{--<td>- одной штук</td>--}}
-                    {{--<td>- всей позицц</td>--}}
-                {{--</tr>--}}
-                {{--@foreach($products as $product)--}}
-                    {{--<tr>--}}
-                        {{--<td>1</td>--}}
-                        {{--<td>{{ $product['item']['title'] }}</td>--}}
-                        {{--<td>{{ $product['qty'] }}</td>--}}
-                        {{--<td>{{ $product['item']['price'] }}</td>--}}
-                        {{--<td>{{ $product['price'] }}</td>--}}
-                        {{--<td></td>--}}
-                        {{--<td>--}}
-                            {{--<a href="{{ route('reduce.by.one', $product['item']['id']) }}">Удалить</a>--}}
-                        {{--</td>--}}
-                        {{--<td>--}}
-                            {{--<a href="{{ route('delete.product', $product['item']['id']) }}">Очистить</a>--}}
-                        {{--</td>--}}
-                    {{--</tr>--}}
-                {{--@endforeach--}}
-            {{--</table>--}}
-            {{--<hr>--}}
-            {{--<h2>Общее количество {{ $totalQty }}</h2>--}}
-            {{--<h2>Общую цену {{ $totalPrice }}</h2>--}}
+                <div class="feedback-block">
+                    <form action="{{ route('get.user') }}" method="POST">
+                        {{ csrf_field() }}
+                        <label for="">Выбрать пользователя</label>
+                        <select name="ipadress" id="">
+                            <option value="134.201.250.155">134.201.250.155</option>
+                        </select>
+                        <input type="submit" value="Получить столицу">
+                    </form>
+                </div>
 
-            {{--<a href="{{ route('destroy') }}">Очистить корзину</a>--}}
-            <form action="{{ route('checkout.form') }}" method="Post">
-                {{ csrf_field() }}
-                <input type="text" value="Имя" name="name">
-                <br>
-                <input type="text" value="Телефон" name="phone">
-                <input type="submit" value="Заказть">
-            </form>
 
         @else
 
-            {{--<p>Продуктов нет в корзине</p>--}}
+            <p>Продуктов нет в корзине</p>
 
         @endif
     </main>

@@ -17,6 +17,8 @@ Route::get('/reduce-by-one/{id}', 'ProductController@reduceByOne')->name('reduce
 Route::get('/delete/{id}', 'ProductController@delete')->name('delete.product');
 Route::get('/checkout', 'CheckoutController@checkout')->name('checkout');
 Route::post('/checkout', 'CheckoutController@checkoutForm')->name('checkout.form');
+Route::get('/success', 'CheckoutController@success')->name('success.redirect');
+Route::post('/get-user', 'CheckoutController@getUser')->name('get.user');
 
 
 Route::get('/', 'HomeController@index')->name('main.page');
