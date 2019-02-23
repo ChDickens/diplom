@@ -15,40 +15,25 @@
         </ul>
         <h1 class="catalog-title">{{ $category->title }}</h1>
         <div class="catalog-container clearfix">
-            <aside class="left-column catalog-filter-column">
-                <form action="/filter" method="post">
+            <aside class="left-column">
+                <form action="/search" method="post">
+                    {{ csrf_field() }}
                     <p>Фильтр:</p>
-                    <h3 class="catalog-filter-title">Цена:</h3>
-                    <div class="catalog-range-filter">
-                        <div class="catalog-filter-controls">
-                            <div class="catalog-filter-scale">
-                                <div class="catalog-scale-bar"></div>
-                            </div>
-                            <div class="catalog-scale-toggle catalog-min-toggle"></div>
-                            <div class="catalog-scale-toggle catalog-max-toggle"></div>
-                        </div>
-                        <div class="catalog-price-controls clearfix">
-                            <input class="catalog-min-price" type="text" value="0">
-                            <span class="catalog-minus-sign">—</span>
-                            <input class="catalog-max-price" type="text" value="30 000">
-                        </div>
-                    </div>
                     <h3 class="catalog-filter-title">Производители:</h3>
-                    <input id="bosch-checkbox" name="bosch" type="checkbox" value="bosch" checked>
+                    <input id="bosch-checkbox" name="model[]" type="checkbox" value="bosch" >
                     <label for="bosch-checkbox">Bosch</label>
-                    <input id="intersckol-checkbox" name="intersckol" type="checkbox" value="intersckol">
+                    <input id="intersckol-checkbox" name="model[]" type="checkbox" value="intersckol">
                     <label for="intersckol-checkbox">Интерскол</label>
-                    <input id="makita-checkbox" name="makita" type="checkbox" value="makita" checked disabled>
+                    <input id="makita-checkbox" name="model[]" type="checkbox" value="makita" >
                     <label for="makita-checkbox">Makita</label>
-                    <input id="dewalt-checkbox" name="dewalt" type="checkbox" value="dewalt">
+                    <input id="dewalt-checkbox" name="model[]" type="checkbox" value="dewalt">
                     <label for="dewalt-checkbox">Dewalt</label>
-                    <input id="hitachi-checkbox" name="hitachi" type="checkbox" value="hitachi">
-                    <label for="hitachi-checkbox">Hitachi</label>
-                    <h3 class="catalog-filter-title">Питание:</h3>
-                    <input type="radio" name="charge" id="rechargeable" value="rechargeable" checked>
-                    <label for="rechargeable">Аккумуляторные</label>
-                    <input type="radio" name="charge" id="unchargeable" value="unchargeable">
-                    <label for="unchargeable">Сетевые</label>
+
+                    <h3 class="catalog-filter-title">Категория:</h3>
+                    <input type="checkbox" name="cat[]" id="recatable" value="1" >
+                    <label for="recatable">Материалы</label>
+                    <input type="checkbox" name="cat[]" id="uncatable" value="2">
+                    <label for="unchargeable">Инструменты</label>
                     <button type="submit" class="filter-btn">Показать</button>
                 </form>
             </aside>

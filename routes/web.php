@@ -32,13 +32,8 @@ Route::post('/checkout', 'CheckoutController@checkoutForm')->name('checkout.form
 Route::get('/success', 'CheckoutController@success')->name('success.redirect');
 Route::post('/get-user', 'CheckoutController@getUser')->name('get.user');
 
-
-Route::get('/', 'HomeController@index')->name('main.page');
-//Route::get('/{slug}', 'PageController@show')->name('page');
-Route::get('/catalog/{slug}', 'ProductController@show')->name('show.product');
 Route::get('/categories/{slug}', 'CategoryController@productList')->name('product.list');
 Route::get('/{slug}', 'PageController@show')->name('show.page');
 Route::post('/search', 'SearchController@search')->name('search');
-
 
 Route::get('/get-add-to-cart/{id}', 'ProductController@getAddToCart')->name('add.to.cart');
