@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Product;
 use Illuminate\Http\Request;
 
@@ -15,5 +16,13 @@ class ProductController extends Controller
         }
 
         return view('front.product-single', compact('product'));
+    }
+
+    public function catalog()
+    {
+        $categories = Category::latest()->get();
+        $products = Product::latest()->get();
+
+        return view('front.catalog', compact('products', 'categories'));
     }
 }

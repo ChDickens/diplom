@@ -13,7 +13,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        \View::share('menu', \App\Menu::all());
+        \View::share('setting', \App\Setting::first());
     }
 
     /**

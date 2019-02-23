@@ -2,8 +2,9 @@
     <div class="container">
         <a href="#" class="header-upper-logo">Техномарт</a>
         <div class="header-upper-search">
-            <form action="/search" method="post">
-                <input type="search" name="search" id="search" placeholder="Поиск:" required>
+            <form action="{{ route('search') }}" method="post">
+                {{ csrf_field() }}
+                <input type="search" name="q" id="search" placeholder="Поиск:" required>
                 <label for="search"></label>
             </form>
         </div>
@@ -16,8 +17,8 @@
     <div class="header-middle-panel clearfix">
         <p class="header-middle-block header-middle-about">Интернет-магазин строительных материалов и инструментов для ремонта</p>
         <div class="header-middle-contacts">
-            <p class="header-contacts-telephone">+7 (812) 555-05-55</p>
-            <p class="header-contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+            <p class="header-contacts-telephone">{{ $setting->phone }}</p>
+            <p class="header-contacts-address">{{ $setting->adres }}</p>
         </div>
         <div class="header-middle-user header-user-connected">
             <a href="#" class="header-user-login">Войти</a>
@@ -25,12 +26,8 @@
         </div>
     </div>
     <nav class="header-bottom-panel">
-        <a href="#">Главная</a>
-        <a href="#">Компания</a>
-        <a href="catalog.html">Каталог</a>
-        <a href="#">Новости</a>
-        <a href="#">Спецпредложения</a>
-        <a href="#">Доставка</a>
-        <a href="#">Контакты</a>
+        @foreach($menu as $item)
+            <a href="{{ $item->slug }}">{{ $item->title }}</a>
+        @endforeach
     </nav>
 </div>

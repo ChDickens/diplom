@@ -11,4 +11,9 @@ class Product extends Model
       'content', 'image', 'is_active', 'old_price', 'price', 'is_new',
         'is_recommended', 'category_id'
     ];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }
