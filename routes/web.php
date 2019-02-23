@@ -21,7 +21,7 @@ Route::get('/success', 'CheckoutController@success')->name('success.redirect');
 Route::post('/get-user', 'CheckoutController@getUser')->name('get.user');
 
 
-Route::get('/', 'HomeController@index')->name('main.page');
+Route::get('/', 'HomeController@index')->name('main');
 //Route::get('/{slug}', 'PageController@show')->name('page');
 Route::get('/catalog/{slug}', 'ProductController@show')->name('show.product');
 Route::get('/categories/{slug}', 'CategoryController@productList')->name('product.list');
