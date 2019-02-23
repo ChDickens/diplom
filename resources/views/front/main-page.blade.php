@@ -5,8 +5,8 @@
         <section class="offer container clearfix">
             @foreach($categories as $category)
                 <div class="offer-item offer-{{ $category->slug }}">
-                    <p class="offer-item-type">{{ $category->title  }}</p>
-                    <a href="{{ route('show.category', $category->slug) }}" class="offer-item-info">На любой вкус</a>
+                    <p class="offer-item-type">{{ $category->title }}</p>
+                    <a href="{{ route('product.list', $category->slug) }}" class="offer-item-info">На любой вкус</a>
                 </div>
             @endforeach
         </section>
@@ -57,7 +57,7 @@
                         <img src="{{ asset('img') . '/' . $product->image }}" width="218" height="169" alt="Перфоратор Bosch BFG 9000">
                     </figure>
                     <div class="catalog-item-buttons">
-                        <a href="#" class="catalog-button catalog-item-buy">Купить</a>
+                        <a href="{{ route('add.to.cart', ['id' => $product->id]) }}" role="button" style="font-size: 16px;">Купить</a>
                         <a href="{{ route('show.product', $product->slug) }}" class="catalog-button catalog-item-bookmark">Подробнее</a>
                     </div>
                     <p class="catalog-item-vendor">{{ $product->title }}</p>

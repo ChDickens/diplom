@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use DB;
+
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,8 +15,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        \View::share('menu', \App\Menu::all());
-        \View::share('setting', \App\Setting::first());
+        $menus = DB::table('menus')
+                   ->where('is_active', 1)
+                   ->orderBy('sort', 'asc')
+                   ->limit(7)
+                   ->get();
+
+        \View::share('menus', $menus);
+        \View::share('settings', \App\Setting::firstOrFail());
     }
 
     /**

@@ -15,4 +15,14 @@ class CategoryController extends Controller
 
         return view('front.products-list', compact('category', 'products'));
     }
+    public function productList($slug) {
+        $category = Category::where('slug', $slug)->firstOrFail();
+
+        $products = Product::where('is_active', 1)
+          ->where('category_id', $category->id)->paginate(5);
+
+        return view('front.product-list',
+          compact('category', 'products'));
+    }
+
 }

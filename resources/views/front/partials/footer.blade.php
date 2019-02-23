@@ -20,8 +20,8 @@
 </div>
 <div class="footer-middle-panel container clearfix">
     <div class="footer-panel-address">
-        <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-        <p>+7 (495) 555-05-55</p>
+        <p>{{ $settings->address }}</p>
+        <p>{{ $settings->phone }}</p>
     </div>
     <ul class="footer-panel-offer">
         <li>
@@ -45,7 +45,7 @@
             <p>Все права защищены</p>
         </div>
         <div class="footer-bottom-social">
-            <a href="#" class="footer-social-btn footer-social-vk"></a>
+            <a href="{{ $settings->social_vk_link }}" class="footer-social-btn footer-social-vk"></a>
             <a href="#" class="footer-social-btn footer-social-fb"></a>
             <a href="#" class="footer-social-btn footer-social-inst"></a>
         </div>

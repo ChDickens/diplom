@@ -1,0 +1,8 @@
+git clone https://github.com/ChDickens/diplom.git
+cd /diplom
+composer install
+php artisan migrate
+сделать страницу отображения заказов
+оживить фильтр
+сделать связи
+сделать пока только по категории фильтрацию
