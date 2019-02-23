@@ -14,6 +14,7 @@ class HomeController extends Controller
 //        latest() - выбирает из таблицы последние  по дате создания
         $categories = Category::all();
         $products = Product::where('is_recommended', 1)->limit(4)->get();
+        $categories = Category::latest()->get();
         $manufacturers = DB::table('manufacturers')
                    ->orderBy('title', 'asc')
                    ->get();
