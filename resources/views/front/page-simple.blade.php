@@ -1,5 +1,7 @@
 @extends('template')
 
+@section('title', $page->title)
+
 @section('content')
     <main class="container">
         <h1>{{ $page->title }}</h1>

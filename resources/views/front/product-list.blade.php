@@ -16,8 +16,7 @@
         <h1 class="catalog-title">{{ $category->title }}</h1>
         <div class="catalog-container clearfix">
             <aside class="left-column">
-                <form action="/search" method="post">
-                    {{ csrf_field() }}
+                <form action="/search" method="get">
                     <p>Фильтр:</p>
                     <h3 class="catalog-filter-title">Производители:</h3>
                     <input id="bosch-checkbox" name="model[]" type="checkbox" value="bosch" >
@@ -30,10 +29,16 @@
                     <label for="dewalt-checkbox">Dewalt</label>
 
                     <h3 class="catalog-filter-title">Категория:</h3>
-                    <input type="checkbox" name="cat[]" id="recatable" value="1" >
+                    <input type="checkbox" name="category[]" id="recatable" value="1" >
                     <label for="recatable">Материалы</label>
-                    <input type="checkbox" name="cat[]" id="uncatable" value="2">
+                    <input type="checkbox" name="category[]" id="uncatable" value="2">
                     <label for="unchargeable">Инструменты</label>
+
+                    <h3 class="catalog-filter-title">Статус:</h3>
+                    <input type="radio" name="status" id="recatable" value="1" >
+                    <label for="recatable">На складе</label>
+                    <input type="radio" name="status" id="uncatable" value="0">
+                    <label for="unchargeable">Нет в наличии</label>
                     <button type="submit" class="filter-btn">Показать</button>
                 </form>
             </aside>

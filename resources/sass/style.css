@@ -6,8 +6,8 @@
 
 @font-face {
     font-family: "symbols-technomart";
-    src: url("../font/symbols-technomart.eot?22619757");
-    src: url("../font/symbols-technomart.eot?22619757#iefix") format("embedded-opentype"), url("../font/symbols-technomart.woff?22619757") format("woff"), url("../font/symbols-technomart.ttf?22619757") format("truetype"), url("../font/symbols-technomart.svg?22619757#symbols-technomart") format("svg");
+    src: url("font/symbols-technomart.eot?22619757");
+    src: url("font/symbols-technomart.eot?22619757#iefix") format("embedded-opentype"), url("font/symbols-technomart.woff?22619757") format("woff"), url("font/symbols-technomart.ttf?22619757") format("truetype"), url("font/symbols-technomart.svg?22619757#symbols-technomart") format("svg");
     font-weight: normal;
     font-style: normal;
 }
@@ -1770,7 +1770,7 @@ footer {
     left: -100px;
     width: 65px;
     height: 65px;
-    background: -21px -616px url("../img/sprites.png") no-repeat;
+    background: -21px -616px url("img/sprites.png") no-repeat;
     content: "";
 }
 
@@ -2178,7 +2178,7 @@ textarea:focus,
     left: 213px;
     width: 45px;
     height: 65px;
-    background: -39px -31px url("../img/sprites.png") no-repeat;
+    background: -39px -31px url("img/sprites.png") no-repeat;
     content: "";
 }
 
@@ -2192,7 +2192,7 @@ textarea:focus,
     left: 198px;
     width: 76px;
     height: 65px;
-    background: -24px -153px url("../img/sprites.png") no-repeat;
+    background: -24px -153px url("img/sprites.png") no-repeat;
     content: "";
 }
 
@@ -2206,7 +2206,7 @@ textarea:focus,
     left: 190px;
     width: 80px;
     height: 65px;
-    background: -22px -275px url("../img/sprites.png") no-repeat;
+    background: -22px -275px url("img/sprites.png") no-repeat;
     content: "";
 }
 
@@ -2220,7 +2220,7 @@ textarea:focus,
     left: 195px;
     width: 60px;
     height: 75px;
-    background: -32px -394px url("../img/sprites.png") no-repeat;
+    background: -32px -394px url("img/sprites.png") no-repeat;
     content: "";
 }
 
@@ -2234,7 +2234,7 @@ textarea:focus,
     left: 190px;
     width: 80px;
     height: 65px;
-    background: -23px -522px url("../img/sprites.png") no-repeat;
+    background: -23px -522px url("img/sprites.png") no-repeat;
     content: "";
 }
 /* СЛАЙДЕР */
@@ -2323,11 +2323,11 @@ textarea:focus,
 }
 
 .offer-slider-drills {
-    background: no-repeat #77685b url("../img/offer-slider-drill.jpg");
+    background: no-repeat #77685b url("img/offer-slider-drill.jpg");
 }
 
 .offer-slider-perforators {
-    background: no-repeat #77685b url("../img/offer-slider-perforator.jpg");
+    background: no-repeat #77685b url("img/offer-slider-perforator.jpg");
 }
 
 .slider-btn {
@@ -2513,7 +2513,7 @@ textarea:focus,
     right: 0;
     width: 10px;
     min-height: 272px;
-    background: 0 0 no-repeat url("../img/column-delimiter.png");
+    background: 0 0 no-repeat url("img/column-delimiter.png");
     content: "";
 }
 
@@ -2573,7 +2573,7 @@ textarea:focus,
     height: 261px;
     bottom: 0;
     right: 0;
-    background: 0 0 no-repeat url("../img/service-details-delivery-background.png");
+    background: 0 0 no-repeat url("img/service-details-delivery-background.png");
     content: "";
 }
 
@@ -2591,7 +2591,7 @@ textarea:focus,
     height: 285px;
     bottom: 0;
     right: 0;
-    background: 0 0 no-repeat url("../img/service-credit-background.png");
+    background: 0 0 no-repeat url("img/service-credit-background.png");
     content: "";
 }
 
@@ -2610,7 +2610,7 @@ textarea:focus,
     height: 283px;
     bottom: 0;
     right: 0;
-    background: 0 0 no-repeat url("../img/service-details-guarantee-background.png");
+    background: 0 0 no-repeat url("img/service-details-guarantee-background.png");
     content: "";
 }
 

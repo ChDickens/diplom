@@ -18,9 +18,9 @@ Route::get('/', 'HomeController@index')->name('main.page');
 Route::get('/catalog/{slug}', 'ProductController@show')->name('show.product');
 Route::get('/catalog', 'ProductController@catalog')->name('show.catalog');
 Route::get('/category/{slug}', 'CategoryController@index')->name('show.category');
-Route::get('/{slug}', 'PageController@show')->name('show.page');
-Route::post('/search', 'SearchController@search')->name('search');
-Route::get('/search', 'SearchController@search');
+//Route::get('/{slug}', 'PageController@show')->name('show.page');
+Route::get('/search', 'SearchController@filter')->name('search');
+//Route::get('/search', 'SearchController@search');
 
 
 Route::get('/show-cart', 'ProductController@showCart')->name('show.cart');
@@ -37,6 +37,6 @@ Route::get('/', 'HomeController@index')->name('main.page');
 Route::get('/catalog/{slug}', 'ProductController@show')->name('show.product');
 Route::get('/categories/{slug}', 'CategoryController@productList')->name('product.list');
 Route::get('/{slug}', 'PageController@show')->name('show.page');
-Route::post('/search', 'SearchController@search')->name('search');
+//Route::post('/search', 'SearchController@search')->name('search');
 
 Route::get('/get-add-to-cart/{id}', 'ProductController@getAddToCart')->name('add.to.cart');

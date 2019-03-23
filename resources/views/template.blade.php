@@ -3,18 +3,32 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <title>Главная страница - Техномарт</title>
-    <meta name="description" content="интернет магазин строительных материалов и инструментов для ремонта">
+    <title>@yield('title')</title>
+    <meta name="description" content="@yield('description')">
     <meta name="keywords" content="материалы, инструменты, техника, перфораторы, дрели, bosch, makita, dewalt, интерскол, hitachi, lg, aeg, metabo">
-    <link href="http://fonts.googleapis.com/css?family=Cuprum:400,400italic,700,700italic&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="{{ asset('css/normalize.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('css/style.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}" type="text/css">
     <link rel="icon" href="{{ asset('img/favicon.ico') }}" type="image/ico">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(49114531, "init", {
+            id:49114531,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/49114531" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </head>
 
 <body>
 <header class="header-panel header-main">
+    <i class="fa fa-address-book" aria-hidden="true"></i>
     @include('front.partials.header')
 </header>
     @yield('content')
